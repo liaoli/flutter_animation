@@ -112,6 +112,12 @@ class _AnimationDemoState extends State<AnimationDemo>
     super.initState();
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   void _incrementCounter() {
     _controller.repeat();
   }
